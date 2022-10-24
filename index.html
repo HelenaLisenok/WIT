@@ -14,16 +14,80 @@
     </style>
 </head>
 <body>
-    <h1>Hello Git</h1>
-    <!--<button type="button">Нажать</button>-->
+    <h1>Упражнение 109</h1>
+    <ol>
+    <li>В переменной month лежит какое-то число из интервала от 1 до 12. 
+        Определите в какую пору года попадает этот месяц (зима, лето, весна, осень).</li>
+
+    <li> Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым 
+        символом этой строки является буква 'a'. Если это так - выведите 'да', в противном случае выведите 'нет'.</li>
+
+    <li>Дано число, например, 12345. Проверьте, что первым символом этого числа является цифра 1, 2 или 3. 
+        Если это так - выведите 'да', в противном случае выведите 'нет'.</li>
+
+    <li>Дано трехзначное число. Найдите сумму цифр этого числа.</li>
+
+    <li>Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. 
+        Если это так - выведите 'да', в противном случае выведите 'нет'.</li>
+    </ol>
+    <!--<button type="button">1</button>-->
     <script>
-        function press() {
-        alert('Ура, меня нажали');
+        function press1() {
+        //alert('Ура, меня нажали');
+            //1. 
+           let month = 22;
+            if (month == 12 || month == 1 || month == 2) {
+	        alert('Winter');
+            }   else if (month >= 3 && month<= 5) {
+	        alert('Spring');
+            } else if (month >= 6 && month <= 8) {
+	            console.log('Summer');
+            } else if (month >= 9 && month <= 11) {
+	            alert('Autumn');
+            }
+            else alert('another number');
+        }
+            
+        function press2() {
+
+        //2 
+        let str = 'abcde';
+         if (str[0] ==='g')
+        alert('Да');
+        else alert('Нет');
+        }
+
+            function press3() {
+           let num = 92345;
+            let num1 = String(num);
+            if (Number(num1[0])==1 || Number(num1[0])==2 || Number(num1[0])==3)
+	        alert('Да');
+            else alert('Нет');
+        }
+
+        function press4() {
+           let num1 = 923;
+            let num2 = String(num1);
+            let sum = Number(num2[0]) + Number(num2[1]) + Number(num2[2]);
+	        alert(sum);
+           
+        }
+
+        function press5() {
+           let num3 = 521125;
+            let num4 = String(num3);
+            let sum1 = Number(num4[0]) + Number(num4[1]) + Number(num4[2]);
+            let sum2 = Number(num4[3]) + Number(num4[4]) + Number(num4[5]);
+            if (sum1 == sum2) alert('так');
+            else alert('ні');
+           
         }
         </script>
-        <input value="Нажми меня" onclick="press()" type="button">
-      
-    
+        <input value="1" onclick="press1()" type="button">
+        <input value="2" onclick="press2()" type="button">
+        <input value="3" onclick="press3()" type="button">
+        <input value="4" onclick="press4()" type="button">
+        <input value="5" onclick="press5()" type="button">
     </body>
 
 <script src="script.js"></script>
